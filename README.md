@@ -204,3 +204,20 @@ Janhavi Mahapatra
 > Understanding them is powerful.”
 
 JobPilot helps you do both.
+
+## 📸 Screenshots
+
+### 🔐 Login Page
+![Login](./screenshots/login-page.png)
+
+### 📝 Register Page
+![Register](./screenshots/register-page.png)
+
+### 📊 Dashboard
+![Dashboard](./screenshots/dashboard.png)
+
+### 📋 Job Applications
+![Jobs](./screenshots/job-list.png)
+
+### ➕ New Job Entry
+![New Job](./screenshots/new-job.png)
