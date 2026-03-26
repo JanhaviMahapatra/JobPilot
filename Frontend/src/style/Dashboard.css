@@ -1,0 +1,75 @@
+/* DASHBOARD WRAPPER: Making it a compact square-ish container */
+.dashboard-wrapper {
+  background: var(--card-bg); /* Match the card theme */
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 30px;
+  max-width: 500px; /* Constraining width to make it a square block */
+  margin: 0; /* Align to the left or center based on preference */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* DASHBOARD TITLE: Smaller for the compact layout */
+.dashboard-title {
+  font-size: 1.5rem !important;
+  margin-bottom: 20px !important;
+}
+
+/* STATS SUMMARY: Stacked or very tight */
+.stats-summary {
+  display: flex;
+  flex-direction: column; /* Stack total and success rate */
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+.summary-item h3 {
+  font-size: 0.95rem;
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.summary-item strong {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+/* CARDS CONTAINER: Using a 2x2 grid to keep it square */
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.stat-card {
+  padding: 15px;
+  min-width: 0;
+  text-align: left;
+}
+
+.stat-card h3 {
+  font-size: 0.75rem;
+}
+
+.stat-card p {
+  font-size: 1.2rem ;
+}
+
+/* CHART WRAPPER: Centered and smaller */
+.chart-wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  background: transparent !important; /* Remove individual background */
+  padding: 0 !important;
+  border: none !important;
+  animation: none !important; /* Stop floating if it's too distracting here */
+}

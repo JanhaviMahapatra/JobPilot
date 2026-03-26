@@ -1,0 +1,139 @@
+/* 1. FORCE VERTICAL STACKING */
+.page-wrapper {
+  display: flex;
+  flex-direction: column; /* This forces elements to stack Top-to-Bottom */
+  gap: 40px;               /* Adds a consistent 40px gap between sections */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: var(--bg-dark);
+}
+
+/* 2. FIX THE TOOLBAR (SEARCH/FILTER) */
+.toolbar {
+  display: flex;
+  flex-direction: row; /* Search and Filter stay side-by-side */
+  align-items: center;
+  gap: 20px;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 16px;
+  width: 100%;
+  box-sizing: border-box; /* Prevents it from going off-screen */
+}
+
+/* 3. ENSURE THE FORM & LIST ARE FULL WIDTH */
+.form-container, 
+.job-grid,
+.dashboard-container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* 4. FIX THE JOB GRID */
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* 5. FIX THE LOGOUT BUTTON POSITION */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Logout button styling */
+.logout-btn {
+  /* Layout & Typography */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  
+  /* High-End "Ghost" Styling */
+  background: rgba(239, 68, 68, 0.05); /* Very faint red tint */
+  color: #ef4444;                     /* Sharp red text */
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 12px;
+  
+  /* Smooth transitions for the "Alive" feel */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.logout-btn:hover {
+  background: #ef4444;               /* Becomes solid red */
+  color: #ffffff;                    /* Text turns white */
+  border-color: #ef4444;
+  
+  /* Premium Glow Effect */
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+  transform: translateY(-2px);       /* Subtle lift */
+}
+
+.logout-btn:active {
+  transform: translateY(0);          /* "Click" feedback */
+  filter: brightness(0.9);
+}
+
+/* SEARCH INPUT INSIDE TOOLBAR */
+.search-input {
+  flex: 1; /* Makes search take up remaining space */
+  background: #090a11;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 14px 20px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  background: #0d0f1a;
+}
+
+/* FILTER GROUP WRAPPER */
+.filter-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* Ensures buttons wrap on mobile */
+}
+
+/* INDIVIDUAL FILTER BUTTONS */
+.filter-btn {
+  background: #1e293b;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-btn:hover {
+  background: #2d3748;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* THE "ACTIVE" FILTER STATE (Purple glow) */
+.filter-btn.active {
+  background: var(--accent-primary);
+  color: white;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  border-color: rgba(255, 255, 255, 0.1);
+}

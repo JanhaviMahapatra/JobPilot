@@ -1,0 +1,16 @@
+{
+  "name": "job-application-tracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+   "dev": "concurrently \"npm run dev --prefix frontend\" \"npm run dev --prefix Backend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.14"
+  }
+}

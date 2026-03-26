@@ -1,0 +1,63 @@
+/* Centering wrapper for the page */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: #0f172a; /* Matching the dashboard theme */
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  /* Balanced Padding: 48px top/bottom, 40px sides */
+  padding: 48px 40px; 
+  gap: 24px; 
+  
+  width: 100%;
+  max-width: 500px;
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(16px);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Creating a "Label" feel without extra tags using pseudo-elements or spacing */
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-container input,
+.form-container textarea {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 16px 20px; /* Internal padding for text */
+  color: #f1f5f9;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Subtle focus lift */
+.form-container input:focus {
+  background: rgba(15, 23, 42, 0.8);
+  border-color: #6366f1;
+  transform: scale(1.01); /* Micro-interaction */
+}
+
+/* Improved Button Spacing */
+.submit-btn {
+  margin-top: 12px;
+  padding: 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}

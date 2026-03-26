@@ -1,0 +1,204 @@
+:root {
+  --bg-dark: #05060b;
+  --card-bg: #111420;
+  --card-hover: #161b2e;
+  --accent-primary: #6366f1;
+  --accent-secondary: #a855f7;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --error: #fb7185;
+  --warning: #fbbf24;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrapper {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+.stats-summary {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.summary-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border-subtle);
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 20px;
+  background: var(--card-bg);
+  border-radius: 24px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  margin-bottom: 60px;
+}
+
+.form-container input, 
+.form-container textarea {
+  background: #090a11;
+  border: 1px solid #2d3142;
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.form-container input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
+}
+
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.job-card {
+  background: var(--card-bg); /* Dark solid base */
+  border: 1px solid #2d3142; /* Visible darker border */
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.job-card:hover {
+  background: var(--card-hover); /* Deepens slightly on hover */
+  transform: translateY(-5px);
+  border-color: var(--accent-primary); /* Purple-Indigo glow effect */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 15px rgba(99, 102, 241, 0.1);
+}
+
+.job-card h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.job-role {
+  color: var(--text-muted);
+  margin: 4px 0 20px 0;
+  font-weight: 500;
+}
+
+.status-badge {
+  background: #1e293b;
+  color: #818cf8;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.deadline-text {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.deadline-urgent {
+  color: var(--error);
+  font-weight: bold;
+}
+
+
+.card-actions {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 15px;
+}
+
+.btn-important {
+  background: none;
+  border: 1px solid #334155;
+  color: var(--warning);
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.btn-important:hover {
+  background: rgba(251, 191, 36, 0.1);
+  border-color: var(--warning);
+}
+
+.apply-link {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-delete {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #475569;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  color: var(--error);
+}
+
+
+.chart-wrapper {
+  margin-top: 40px;
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid var(--border-subtle);
+}
